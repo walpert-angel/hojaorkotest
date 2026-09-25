@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hoja D&D - Labrob (Sanador)</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/Fogata.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="sheet">
+
+        <div class="layout">
+
+            <div>
+                <h2 id="nombre"></h2>
+                <div class="info-subtitle">
+                    ✨ <span id="info"></span> ✨
+                </div>
+
+                <div class="divider"><span class="divider-icon">⚔️</span></div>
+
+                <h2>Atributos</h2>
+                <div class="grid stats-grid" id="stats"></div>
+
+                <div class="divider"><span class="divider-icon">🛡️</span></div>
+
+                <h2>Combate</h2>
+                <div id="combate"></div>
+
+                <div class="divider"><span class="divider-icon">🔋</span></div>
+
+                <h2>Recursos y Descansos</h2>
+                <div id="recursos"></div>
+
+            </div>
+
+            <div>
+                <h2>Tiradas de Salvación</h2>
+                <div id="saves" class="saves-grid"></div>
+
+                <div class="divider"><span class="divider-icon">🎯</span></div>
+
+                <h2>Habilidades</h2>
+                <div id="skills" class="skills-grid"></div>
+
+                <div class="divider"><span class="divider-icon">📜</span></div>
+
+                <h2>Competencias e Idiomas</h2>
+                <div id="competencias" class="competencias-box"></div>
+            </div>
+
+        </div>
+
+        <div class="divider"><span class="divider-icon">📜</span></div>
+
+        <h2>Nivel 3: Brutalidad</h2>
+<div>
+  <p>
+    Moldeado por la intensidad de la arena, has aprendido a ejecutar brutales movimientos marciales.
+    Una vez por turno, cuando golpeas a una criatura con una tirada de ataque usando un arma cuerpo a cuerpo,
+    puedes agregar uno de los siguientes efectos de Brutalidad de tu elección.
+  </p>
+
+  <p>
+    Puedes hacer esto un número de veces igual a tu modificador de Carisma (mínimo de una vez),
+    y recuperas todos los usos gastados cuando terminas un Descanso Corto o Largo.
+  </p>
+
+  <div>
+    <strong>Sangrado.</strong>
+    Puedes activar la propiedad de maestría Sap además de una propiedad de maestría diferente
+    que estés usando con esa arma, y el objetivo recibe daño adicional igual a tu modificador de Carisma
+    (mínimo de 1 daño). El tipo de daño adicional es el mismo tipo que el tipo del arma.
+  </div>
+
+  <div>
+    <strong>Engaño.</strong>
+    Puedes activar la propiedad de maestría Vex además de una propiedad de maestría diferente
+    que estés usando con esa arma, y tienes Ventaja en la siguiente tirada de salvación que hagas
+    antes del final de tu siguiente turno.
+  </div>
+
+  <div>
+    <strong>Tropezar.</strong>
+    Puedes activar la propiedad de maestría Derribo además de otra propiedad de maestría
+    que estés usando con esa arma, y en su siguiente turno, el objetivo solo puede realizar
+    una acción o una acción adicional, no ambas.
+  </div>
+</div>
+
+<h2>Nivel 3: Teatro de combate</h2>
+<div>
+  <p>
+    Has perfeccionado tus habilidades de combate para entretener, devastando a tus oponentes
+    y deslumbrando a los espectadores. Obtienes los siguientes beneficios:
+  </p>
+
+  <div>
+    <strong>Estilo atlético.</strong>
+    Siempre que hagas una prueba de Destreza (Acrobacias) o Fuerza (Atletismo),
+    obtienes una bonificación a la prueba igual a tu modificador de Carisma (mínimo de +1).
+  </div>
+
+  <div>
+    <strong>Competencia adicional.</strong>
+    Obtienes competencia en una de estas habilidades a tu elección:
+    Acrobacias, Atletismo, Engaño, Intimidación o Interpretación.
+  </div>
+</div>
+
+        <div id="Conjuros"></div>
+
+        <div class="divider"><span class="divider-icon">📖</span></div>
+
+
+        <h2>Trucos</h2>
+        <div id="Trucos"></div>
+
+        <div class="divider"><span class="divider-icon">🎒</span></div>
+
+        <h2>Equipo e Inventario</h2>
+        <div id="equipo"></div>
+
+        <div class="divider"><span class="divider-icon">✍️</span></div>
+
+        <h2>Notas y Rasgos</h2>
+        <div id="notas"></div>
+
+        <img src="img/Rosa.png" class="rosa-footer" alt="Decoración Rosa">
+
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

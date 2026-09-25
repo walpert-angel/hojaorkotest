@@ -1,0 +1,471 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../img/m41nsckuonya1.png') center/cover fixed;
+    font-family: 'VT323', monospace;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Consejos de Soporte */
+.reminders-box {
+    background-color: #e8c69f;
+    border: 2px solid #8d5c46;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 15px 0;
+}
+
+.reminders-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 1.1em;
+    color: #4a2c20;
+    line-height: 1.4;
+}
+
+.reminders-list li {
+    margin-bottom: 8px;
+}
+
+.reminders-list li:last-child {
+    margin-bottom: 0;
+}
+
+.sheet {
+    width: 100%;
+    max-width: 900px;
+    background-color: #f2d1a9;
+    padding: 40px;
+    border: 2px solid #5d4037;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Layout */
+.layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.box {
+    border: 2px solid #5d4037;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #5d4037, transparent);
+}
+
+.divider-icon {
+    margin: 0 10px;
+}
+
+/* HP */
+.hp-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hp-inputs {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.hp-inputs input {
+    width: 60px;
+    text-align: center;
+    font-family: inherit;
+}
+
+.hp-bar-container {
+    width: 200px;
+    height: 20px;
+    background: #3a2a1f;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* vida normal */
+.hp-bar {
+    height: 100%;
+    background: #4caf50;
+    transition: 0.3s;
+}
+
+/* vida temporal */
+.hp-temp {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #4fc3f7;
+    /* 🔵 azul */
+    transition: 0.3s;
+}
+
+.saves-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.save-box {
+    border: 2px solid #5d4037;
+    background: rgba(93, 64, 55, 0.08);
+    padding: 6px;
+    text-align: center;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.save-box b {
+    display: block;
+    font-size: 1.1em;
+    color: #3e2723;
+}
+
+.save-box .save-bonus {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2c1810;
+}
+
+.save-box.prof {
+    border-color: #8d2b24;
+    background: rgba(141, 43, 36, 0.12);
+    box-shadow: 0 0 5px rgba(141, 43, 36, 0.2);
+}
+
+.save-box.prof .save-bonus {
+    color: #8d2b24;
+}
+
+.competencias-box {
+    background-color: #e8c69f;
+    border: 2px solid #8d5c46;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 1.1em;
+    color: #4a2c20;
+    line-height: 1.45;
+}
+
+.competencias-box div {
+    margin-bottom: 6px;
+}
+
+.competencias-box div:last-child {
+    margin-bottom: 0;
+}
+
+.spell-category-header {
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #8d5c46;
+    border-bottom: 1px dashed #8d5c46;
+    padding-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-grid {
+    display: grid;
+    gap: 4px;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rosa-footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 120px;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 2;
+}
+
+#nombre {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    color: #2c1810;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* PASIVA SUBCLASE */
+.subclass-passive {
+    background-color: #e8c69f;
+    border: 2px dashed #8d5c46;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.passive-icon {
+    font-size: 2.2em;
+    line-height: 1;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.15));
+}
+
+.passive-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.passive-text strong {
+    font-size: 1.15em;
+    color: #4a2c20;
+}
+
+.passive-text span {
+    font-size: 0.95em;
+    color: #5d4037;
+}
+
+/* CONTENEDOR DE RECURSOS */
+.recursos-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 15px;
+    background: rgba(93, 64, 55, 0.08);
+    border-radius: 6px;
+    border: 1px solid rgba(93, 64, 55, 0.25);
+    margin-bottom: 10px;
+}
+
+.recurso-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.recurso-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.15em;
+    color: #3e2723;
+}
+
+.recurso-count {
+    font-size: 1em;
+    color: #5d4037;
+}
+
+.slots-container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* SLOTS DE RECURSO */
+.resource-slot {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #5d4037;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15), 1px 1px 1px rgba(0,0,0,0.15);
+}
+
+.resource-slot:hover {
+    transform: scale(1.1);
+}
+
+/* Activos (Disponibles) */
+.resource-slot.celeste.active {
+    background-color: #80deea; /* celeste claro (Forma Salvaje) */
+    box-shadow: 0 0 6px rgba(128, 222, 234, 0.6), inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+.resource-slot.rosa.active {
+    background-color: #f48fb1; /* rosa feérico (Bálsamo Fey) */
+    box-shadow: 0 0 8px rgba(244, 143, 177, 0.8), inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+.resource-slot.azul.active {
+    background-color: #5c6bc0; /* azul índigo */
+    box-shadow: 0 0 6px rgba(92, 107, 192, 0.6), inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+.resource-slot.violeta.active {
+    background-color: #ba68c8; /* violeta arcano (Nivel 3) */
+    box-shadow: 0 0 8px rgba(186, 104, 200, 0.8), inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+.resource-slot.oro.active {
+    background-color: #ffd54f; /* oro brillante */
+    box-shadow: 0 0 6px rgba(255, 213, 79, 0.6), inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+/* Gastados (Negros) */
+.resource-slot.spent {
+    background-color: #2c2c2c;
+    border-color: #1a1a1a;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.6);
+}
+
+/* BOTONES DE DESCANSO */
+.rest-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.rest-btn {
+    padding: 8px 12px;
+    font-family: inherit;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fbe9e7;
+    border: 2px solid #4a2c20;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.rest-btn:active {
+    transform: translateY(1px);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.rest-btn.short-rest {
+    background-color: #8d6e63;
+}
+
+.rest-btn.short-rest:hover {
+    background-color: #a1887f;
+}
+
+.rest-btn.long-rest {
+    background-color: #5d4037;
+}
+
+.rest-btn.long-rest:hover {
+    background-color: #6d4c41;
+}
+
+/* AJUSTES DE CONJUROS Y TEXTOS */
+.spell-item {
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    background: rgba(93, 64, 55, 0.05);
+    border-left: 3px solid #8d2b24;
+    border-radius: 0 4px 4px 0;
+}
+
+.spell-bono {
+    color: #8d2b24;
+}
+
+.spell-dmg {
+    color: #4a2c20;
+}
+
+/* RESPONSIVE / MÓVILES */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .sheet {
+        padding: 20px 15px;
+        border-radius: 0; /* Pantalla completa en bordes */
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    #nombre {
+        font-size: 2.2em;
+    }
+
+    .subclass-passive {
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .passive-icon {
+        font-size: 1.8em;
+    }
+
+    /* Ajustar tamaño de toque de cuadritos para móvil (mínimo de área táctil sugerida) */
+    .resource-slot {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Botones de Selección de Tierra */
+.land-btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.land-btn:hover {
+    background-color: #e8c69f !important;
+    transform: scale(1.05);
+}
+
+.land-btn.active {
+    background-color: #8d5c46 !important;
+    color: #fbe9e7 !important;
+    font-weight: bold !important;
+    border-color: #4a2c20 !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
